@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 
 typedef struct Node
 {
@@ -29,6 +31,31 @@ void InsertNode(Node **root, const char *data)
 
 int main(int argc, char const *argv[])
 {
+  char mode;
+  char input_string[10];
+  char *string;
+  while (true)
+  {
+    scanf("%c %s", &mode, input_string);
+    string = (char *)malloc(sizeof(input_string) + 1);
+    strcpy_s(string, 10, input_string);
+    if (mode == 'Q')
+    {
+      break;
+    }
+    else if (mode == 'I')
+    {
+      /* code */
+    }
+    else if (mode == 'S')
+    {
+      /* code */
+    }
+    else if (mode == 'D')
+    {
+      /* code */
+    }
+  }
 
   return 0;
 }
