@@ -101,7 +101,7 @@ bool SearchData(const char *data)
     {
       return true;
     }
-    if (strcmp(temp->key, data) == -1)
+    if (strcmp(temp->key, data) > 0)
     {
       if (temp->left == NULL)
       {
@@ -139,7 +139,7 @@ void Insert(const char *data)
   P_Node temp = Root->root;
   while (1)
   {
-    if (strcmp(temp->key, data) == -1)
+    if (strcmp(temp->key, data) > 0)
     {
       if (!temp->left)
       {
@@ -180,11 +180,11 @@ void Delete(const char *data)
   {
     // puts("while start");
     parent = temp;
-    if (strcmp(temp->key, data) == -1)
+    if (strcmp(temp->key, data) > 0)
     {
       temp = temp->left;
     }
-    else if (strcmp(temp->key, data) == 1)
+    else
     {
       temp = temp->right;
     }
