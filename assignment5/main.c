@@ -124,7 +124,7 @@ void Insert(const char *data)
 {
   P_Node newNode;
   newNode = GenerateNode();
-  newNode->key = malloc(sizeof(data));
+  newNode->key = malloc(sizeof(char) * strlen(data) + 1);
   strcpy(newNode->key, data);
   if (!Root->root)
   {
