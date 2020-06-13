@@ -308,7 +308,7 @@ int main(int argc, char const *argv[])
       }
       else if (mode == 'S')
       {
-        SearchData(data);
+        printf(SearchData(data) ? "is In Tree\n" : "Isn't in Tree\n");
       }
       else if (mode == 'D')
       {
