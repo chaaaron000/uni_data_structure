@@ -29,7 +29,7 @@ bool SearchData(const char *);
 void Delete(const char *);
 void Push(char);
 void Pop();
-void Show();
+void ShowNode();
 
 P_Node GenerateNode()
 {
